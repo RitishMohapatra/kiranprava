@@ -36,5 +36,22 @@
     "incremental": true
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/Wave.tsx",
+    "src/components/Wave.tsx",
+    "src/components/Product.tsx",
+    "src/components/Pricing.tsx",
+    "src/components/MainHeroImage.tsx",
+    "src/components/MainHero.tsx",
+    "src/components/LazyShow.tsx",
+    "src/components/Header.tsx",
+    "src/components/Features.tsx",
+    "src/components/Divider.tsx",
+    "src/components/Canvas.tsx",
+    "src/components/Analytics.tsx",
+    "src/components/About.tsx"
+  ]
 }
