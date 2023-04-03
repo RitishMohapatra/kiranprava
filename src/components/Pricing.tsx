@@ -5,7 +5,7 @@ import config from '../config/index.json';
 const Pricing = () => {
   const { pricing } = config;
   const { items, title } = pricing;
-  const [ name, priceDetails, features] = items;
+  // const [ name, priceDetails, features] = items;
 
   return (
     <div className={`py-12 bg-background`} id="pricing">
