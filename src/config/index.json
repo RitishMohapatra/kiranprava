@@ -1,0 +1,506 @@
+{
+  "company": {
+    "name": "Kiran Prava Pvt Ltd",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "About",
+      "href": "product"
+    },
+    {
+      "name": "Features",
+      "href": "features"
+    },
+
+    {
+      "name": "Products",
+      "href": "pricing"
+    },
+    {
+      "name": "Contact",
+      "href": "footer"
+    }
+  ],
+  "callToAction": {
+    "text": "Get started",
+    "href": "#"
+  },
+  "mainHero": {
+    "title": "Kiran Prava ",
+    "subtitle": "Pvt Ltd",
+    "description": "Kiran Prava is committed for providing the Cost effective Coding and Packing solutions through supplying Continuous Inkjet Printer (Videojet, Domino), Thermal Inkjet Printer, TTO Printer (Videojet, Domino). We are also supplying Consumables which are compatible for leading brands such as Domino, Videojet, Willet, Imaje, Alphajet, Linx, Citronix etc.Global Print Pack Solution Provides 24X7 service support for all kinds of CIJ printers.",
+    "img": "/assets/images/happyTeam.jpeg",
+    "primaryAction": {
+      "text": "Get started",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Email us",
+      "href": "mailto:kiranpravapvtltd@gmail.com?subject=Customer inquiry"
+    }
+  },
+  "product": {
+    "title": "Kiran Prava Pvt Ltd",
+    "items": [
+      {
+        "title": "More About Us",
+        "description": "Being the pioneer in this field, We have carved a dominant position as one of the leading Wholesale Supplier, Exporter & Manufacturer of CIJ Printer spares at the most economic price. We cater our most economic consumables for all kinds of Continuous Inkjet Printers and providing timely and satisfactory services. With a vast experience in the CIJ industry, We have the ability to work with the different variety of industry customers such as Pharmaceutical, Glass, Auto ancillary, Food & beverages, Liquor, Condom manufacturers, Cable & Pipe Industries across India Our range in Packging machine Shrink and Stretch Wrapping Machines. is inclusive of Box Strapping Machines, Shrink Wrapping Machines and Sealing Machines. On account of giving services for our products we are always available to our clients. These machines are made out of finest quality materials and are highly appreciated among our client base because of their optimal design, easy installation, high operational efficiency and long-term functionality. In addition, we offer after sales services for the products offered by us. These services are rendered by expert professionals and are regarded for their cost-effectiveness.",
+        "img": "/assets/images/product1.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Latest & greatest ",
+    "subtitle": "All the best technologies out there!",
+    "description": "Providing the Cost effective Coding and Packing solutions through supplying Continuous Inkjet Printer (Videojet, Domino), Thermal Inkjet Printer, TTO Printer (Videojet, Domino). We are also supplying Consumables which are compatible for leading brands such as Domino, Videojet, Willet, Imaje, Alphajet, Linx, Citronix etc.Global Print Pack Solution Provides 24X7 service support for all kinds of CIJ printers.",
+    "items": [
+      {
+        "name": "Printing Solution",
+        "description": "Industrial Inkjet Printer | Handheld Inkjet Printer | Inkjet Printer Consumable | Inkjet Printer Spares Parts | HP Ink Cartridge | Printer Head Wash Solution | Printer Stands",
+        "icon": "/assets/images/react.png"
+      },
+      {
+        "name": "Machine Solution",
+        "description": "Batch Coding Machine | Packaging Machine | Sealing Machine | Semi Automatic Box Strapping Machines | Carton Taping Machine | Coding Machine | Handy Marker Machine",
+        "icon": "/assets/images/tailwindcss.svg"
+      },
+      {
+        "name": "More Product",
+        "description": "LDPE Shrink Film Roll | ",
+        "icon": "/assets/images/nextjs.svg"
+      },
+      {
+        "name": "Other Product",
+        "description": "Tto Ribbons",
+        "icon": "/assets/images/ts.png"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Products",
+    "items": [
+      {
+        "name": "/images/img01.jpeg",
+        "price": "Inkjet Printer Batch Printing Conveyor",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img03.jpeg",
+        "price": "12.7 mm LB100s Handheld Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img03.jpeg",
+        "price": "25.4 Mm Lb200 Handheld Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img04.jpeg",
+        "price": "M3S Handheld Inkjet Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img05.jpeg",
+        "price": "M6 Handheld Inkjet Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img06.jpeg",
+        "price": "M7 Handheld Inkjet Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img07.jpeg",
+        "price": "Meenjet MX1 Batch Printing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img08.jpeg",
+        "price": "1 Litter Videojet Printing Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img09.png",
+        "price": "502 Reservoir Domino Printing Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img10.jpeg",
+        "price": "1000 Ml Alphajet Printing Make Up Solution",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img11.png",
+        "price": "Hitachi Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img12.jpeg",
+        "price": "Leadtech Makeup",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img13.jpeg",
+        "price": "Linx Printer Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img14.jpeg",
+        "price": "Linx Printer Makeup",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img15.jpeg",
+        "price": "V1 Alfajet Ink Makeup",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img16.jpeg",
+        "price": "V2 Mekup Alphajet",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img17.jpeg",
+        "price": "Videojet Printing Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img18.jpeg",
+        "price": "Videojet V 701 D Makeup",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img19.jpeg",
+        "price": "0226 Filtrs Kit Without Damper Filter",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img20.jpeg",
+        "price": "a120 keyboard membrane for domino printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img21.jpeg",
+        "price": "for Linx 7300 printer keyboard display keypad display 7300 keyboard membranes",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img22.jpeg",
+        "price": "Hitachi High Quality New Px Pb pH Series Filter Set Spare Part for Inkjet Pinter",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img23.jpeg",
+        "price": "LINX black Ink 5 pieces filter set",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img24.jpeg",
+        "price": "videojet 1210 eht module",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img25.jpeg",
+        "price": "videojet valve module",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img26.jpeg",
+        "price": "25.4mm Ink Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img27.jpeg",
+        "price": "HP 2580 Solvent Ink Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img28.jpeg",
+        "price": "HP 2590 Solvent Ink Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img29.jpeg",
+        "price": "Hp IQ797 Ink",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img30.jpeg",
+        "price": "HP JS12 Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img31.jpeg",
+        "price": "JS10 Ink Jet Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img32.jpeg",
+        "price": "Automatic Box Strapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img33.jpeg",
+        "price": "Box Stretch Wrapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img34.jpeg",
+        "price": "Double Chamber Vacuum Packing Machine 255kg",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img35.jpeg",
+        "price": "Floor Model Strapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img36.jpeg",
+        "price": "H45L Helios Strapping Tool",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img37.jpeg",
+        "price": "Heavy Duty Rewinding Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img38.jpeg",
+        "price": "Pallet Wrapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img39.jpeg",
+        "price": "Pneumatic Pet Strapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img40.jpeg",
+        "price": "Semi Automatic Strapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img41.jpeg",
+        "price": "Shrink Tunnel Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img42.jpeg",
+        "price": "Shrink Wrapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img43.jpeg",
+        "price": "Uttiny Label Applicator",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img44.jpeg",
+        "price": "Vacuum Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img45.jpeg",
+        "price": "Automatic Carton Sealing Machine Haulian Make",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img46.jpeg",
+        "price": "Hand Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img47.jpeg",
+        "price": "Hand Sealing Machine 8inch",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img48.jpeg",
+        "price": "Horizontal Band Sealer Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img49.jpeg",
+        "price": "Manual Tensioner Sealer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img50.jpeg",
+        "price": "Portable Induction Cap Sealer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img51.jpeg",
+        "price": "Semi Automatic Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img52.jpeg",
+        "price": "Vertical Band Sealer Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img53.jpeg",
+        "price": "Automatic Carton Sealing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img54.jpeg",
+        "price": "Dy 8 Manual Hot Code Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img55.jpeg",
+        "price": "Hand Marker Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img56.jpeg",
+        "price": "LGYF 1500A Continuous Induction Sealer Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img57.jpeg",
+        "price": "Trnspack Strapping Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img58.jpeg",
+        "price": "Plastic Wraping Rolls",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img59.jpeg",
+        "price": "Stretch wrapping film",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img60.jpeg",
+        "price": "Markem Imaje Additive",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img61.jpeg",
+        "price": "Imaje Refurbished Inkjet Printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img62.jpeg",
+        "price": "Hp 45 Ink Cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img63.jpeg",
+        "price": "Pad Printing Machines",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img64.jpeg",
+        "price": "Red ink cartridge",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img65.jpeg",
+        "price": "Wash Solution inkjet printer",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img66.jpeg",
+        "price": "Handheld printer Stand",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img67.png",
+        "price": "TTO Printer Ribbon",
+        "priceDetails": "",
+        "features": []
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "Address",
+        "href": "#",
+        "content": "REGD. OFFICE: PLOT NO. 1923/2606 K NO 603-21 NEOGI COLONY PO-PS MANGALABAG CUTTACK - 753001"
+      },
+      {
+        "name": "Something",
+        "href": "#",
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/issaafalkattan",
+      "twitter": "https://twitter.com/issaafkattan",
+      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+    }
+  }
+}
