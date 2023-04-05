@@ -192,7 +192,7 @@ return (
         <span>© 2023 Copyright:</span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
-          href="https://tailwind-elements.com/"
+          href="https://ritishm.netlify.app/" target="_blank"
         >
           Made with ❤️ by Ritish Mohapatra
         </a>
