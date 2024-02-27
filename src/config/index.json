@@ -80,6 +80,49 @@
   "pricing": {
     "title": "Products",
     "items": [
+     
+      {
+        "name": "/images/img76.png",
+        "price": "Close Body Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img75.png",
+        "price": "Split Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img74.png",
+        "price": "ON-FLY Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img73.png",
+        "price": "Hand Held Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img72.png",
+        "price": "UV Flying Laser Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img71.png",
+        "price": "Flying Online CO2 Laser Marking Laser Printing Machine",
+        "priceDetails": "",
+        "features": []
+      },
+      {
+        "name": "/images/img70.png",
+        "price": "Fiber Flying Laser Marking Machine",
+        "priceDetails": "",
+        "features": []
+      },
       {
         "name": "/images/img68.jpg",
         "price": "Hot Melt Adhesive For Pe/Pet Bottle Labeling Weather Resistance  Hot Melt Adhesive",
