@@ -1,123 +1,132 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
-import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
-
-import config from '../config/index.json';
+import config from "../config/index.json";
 
 const Menu = () => {
   const { navigation, company, callToAction } = config;
   const { name: companyName, logo } = company;
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
-      <svg
-        className={`hidden lg:block absolute right-0 inset-y-0 h-full  w-56 text-background transform translate-x-1/2`}
-        fill="currentColor"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <polygon points="50,0 100,0 50,100 0,100" />
-      </svg>
-
-      <Popover>
-        <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-          <nav
-            className="relative flex items-center justify-between sm:h-10 lg:justify-start"
-            aria-label="Global"
-          >
-            <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-              <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span className="sr-only">{companyName}</span>
-                  <img alt="logo" className=" h-36 w-auto " src={logo} />
-                </a>
-                <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
-                  >
-                    <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-            </div>
-            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  spy={true}
-                  active="active"
-                  smooth={true}
-                  duration={1000}
-                  key={item.name}
-                  to={item.href}
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
+    <Popover
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scroll ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+          <div className="flex justify-start lg:w-0 lg:flex-1">
+            <Link href="/">
+              <a href="#">
+                <span className="sr-only">{companyName}</span>
+                <Image
+                  className="h-16 w-auto sm:h-20"
+                  src={logo}
+                  alt={companyName}
+                  width={80}
+                  height={80}
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="-mr-2 -my-2 md:hidden">
+            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
+              <span className="sr-only">Open menu</span>
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            </Popover.Button>
+          </div>
+          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            {navigation.map((item) => (
+              <Link key={item.name} href={item.href}>
+                <a className="text-base font-medium text-tertiary hover:text-primary cursor-pointer transition-colors">
                   {item.name}
-                </Link>
-              ))}
-             
-            </div>
-          </nav>
-        </div>
-
-        <Transition
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel
-            focus
-            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-          >
-            <div
-              className={`rounded-lg shadow-md bg-background ring-1 ring-black ring-opacity-5 overflow-hidden`}
+                </a>
+              </Link>
+            ))}
+          </Popover.Group>
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <a
+              href={callToAction.href}
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-blue-700 transition-colors"
             >
-              <div className="px-5 pt-4 flex items-center justify-between">
+              {callToAction.text}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <Transition
+        as={Fragment}
+        enter="duration-200 ease-out"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="duration-100 ease-in"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
+        <Popover.Panel
+          focus
+          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        >
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="pt-5 pb-6 px-5">
+              <div className="flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src={logo} alt="" />
+                  <Image
+                    className="h-12 w-auto"
+                    src={logo}
+                    alt={companyName}
+                    width={48}
+                    height={48}
+                  />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
-                  >
-                    <span className="sr-only">Close main menu</span>
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
+                    <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                    spy={true}
-                    active="active"
-                    smooth={true}
-                    duration={1000}
-                    key={item.name}
-                    to={item.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="mt-6">
+                <nav className="grid gap-y-8">
+                  {navigation.map((item) => (
+                    <Link key={item.name} href={item.href}>
+                      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 cursor-pointer">
+                        <span className="ml-3 text-base font-medium text-gray-900">
+                          {item.name}
+                        </span>
+                      </a>
+                    </Link>
+                  ))}
+                </nav>
               </div>
-              <a
-                href={callToAction.href}
-                className={`block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100`}
-              >
-                {callToAction.text}
-              </a>
             </div>
-          </Popover.Panel>
-        </Transition>
-      </Popover>
-    </>
+            <div className="py-6 px-5 space-y-6">
+              <div>
+                <a
+                  href={callToAction.href}
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary hover:bg-blue-700"
+                >
+                  {callToAction.text}
+                </a>
+              </div>
+            </div>
+          </div>
+        </Popover.Panel>
+      </Transition>
+    </Popover>
   );
 };
 

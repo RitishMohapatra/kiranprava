@@ -5,21 +5,20 @@
   },
   "navigation": [
     {
-      "name": "About",
-      "href": "product"
+      "name": "Home",
+      "href": "/"
     },
     {
-      "name": "Feature",
-      "href": "features"
+      "name": "About",
+      "href": "/about"
     },
-
     {
       "name": "Products",
-      "href": "pricing"
+      "href": "/products"
     },
     {
       "name": "Contact",
-      "href": "footer"
+      "href": "/contact"
     }
   ],
   "callToAction": {

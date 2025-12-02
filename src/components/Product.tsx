@@ -1,63 +1,52 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
-import config from '../config/index.json';
-import Divider from './Divider';
+import config from "../config/index.json";
+import Divider from "./Divider";
 
 const Product = () => {
   const { product } = config;
-  const [firstItem, secondItem] = product.items;
+  const { items: productItems } = product;
 
   return (
-    <section className={`bg-background py-8`} id="product">
-      <div className={`container max-w-5xl mx-auto m-8`}>
+    <section className={`bg-background py-16`} id="product">
+      <div className={`container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}>
         <h1
-          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
+          className={`w-full my-2 text-4xl font-extrabold leading-tight text-center text-primary font-heading sm:text-5xl`}
         >
-          {product.title.split(' ').map((word, index) => (
-            <span
-              key={index}
-              className={index % 2 ? 'text-primary' : 'text-border'}
-            >
-              {word}{' '}
-            </span>
-          ))}
+          {product.title}
         </h1>
         <Divider />
-        <div className={`flex flex-wrap`}>
-          <div className={`w-5/6 sm:w-1/2 p-6 mt-20`}>
-            <h3
-              className={`text-3xl text-gray-800 font-bold leading-none mb-3`}
+
+        <div className="mt-12 space-y-24">
+          {productItems.map((item, index) => (
+            <div
+              key={index}
+              className={`flex flex-wrap items-center ${
+                index % 2 === 1 ? "flex-row-reverse" : ""
+              }`}
             >
-              {firstItem?.title}
-            </h3>
-            <p className={`text-gray-600`}>{firstItem?.description}</p>
-          </div>
-          <div className={`w-full sm:w-1/2 p-6`}>
-            <img
-              className="h-6/6"
-              src={firstItem?.img}
-              alt={firstItem?.title}
-            />
-          </div>
-        </div>
-        <div className={`flex flex-wrap flex-col-reverse sm:flex-row`}>
-          <div className={`w-full sm:w-1/2 p-6`}>
-            <img
-              className="h-6/6"
-              src={secondItem?.img}
-              alt={secondItem?.title}
-            />
-          </div>
-          <div className={`w-full sm:w-1/2 p-6 mt-20`}>
-            <div className={`align-middle`}>
-              <h3
-                className={`text-3xl text-gray-800 font-bold leading-none mb-3`}
-              >
-                {secondItem?.title}
-              </h3>
-              <p className={`text-gray-600 mb-8`}>{secondItem?.description}</p>
+              <div className={`w-full sm:w-1/2 p-6`}>
+                <h3
+                  className={`text-3xl text-primary font-bold leading-none mb-4 font-heading`}
+                >
+                  {item.title}
+                </h3>
+                <p className={`text-tertiary text-lg leading-relaxed`}>
+                  {item.description}
+                </p>
+              </div>
+              <div className={`w-full sm:w-1/2 p-6`}>
+                <Image
+                  className="w-full rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  src={item.img}
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                />
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
