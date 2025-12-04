@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Image from "next/image";
@@ -24,162 +24,183 @@ const ProductsPage = () => {
     }
   }, [router.query.category, selectedCategory]);
 
-  const a400SubProducts = [
-    {
-      id: "ink2",
-      name: "INK2",
-      image: "/images/ink2.png",
-    },
-    {
-      id: "ink3",
-      name: "INK3",
-      image: "/images/ink3.png",
-    },
-    {
-      id: "ink4",
-      name: "INK4",
-      image: "/images/ink4.png",
-    },
-    {
-      id: "pro1",
-      name: "PRO1",
-      image: "/images/pro1.png",
-    },
-  ];
-
-  const f500SubProducts = [
-    {
-      id: "ink5",
-      name: "INK5",
-      image: "/images/ink5.png",
-    },
-    {
-      id: "ink6",
-      name: "INK6",
-      image: "/images/ink6.png",
-    },
-    {
-      id: "ink7",
-      name: "INK7",
-      image: "/images/ink7.png",
-    },
-  ];
-
-  const cijProducts = [
-    {
-      id: "a400",
-      name: "FASTJET A400 SERIES",
-      subtitle: "",
-      color: "text-red-600",
-      image: "/assets/images/happyTeam.jpg", // Update with actual A400 image path
-      companyInfo: {
-        brand: "FASTJET",
-        description:
-          "Germany Brand and a German-China joint venture CIJ manufacturer shared by Germany 100 years group Cyklop International. We all adopt Germany ways of production management and technology all comes from Germany and assembled in Shanghai.",
-        leadership: "We are a leading CIJ company in some Asian countries.",
+  const a400SubProducts = useMemo(
+    () => [
+      {
+        id: "ink2",
+        name: "INK2",
+        image: "/images/ink2.png",
       },
-      features: [
-        "Modular design",
-        "Better printing Quality",
-        "Various ports",
-        "Upgraded control system",
-        "More stable printerhead",
-      ],
-      subProducts: a400SubProducts,
-    },
-    {
-      id: "f500",
-      name: "FASTJET F500",
-      subtitle: "Small Character Ink Jet Printer",
-      color: "text-red-600",
-      companyInfo: {
-        brand: "FASTJET",
-        description:
-          "Germany Brand and a German-China joint venture CIJ manufacturer shared by Germany 100 years group Cyklop International. We all adopt Germany ways of production management and technology all comes from Germany and assembled in Shanghai.",
-        leadership: "We are a leading CIJ company in some Asian countries.",
+      {
+        id: "ink3",
+        name: "INK3",
+        image: "/images/ink3.png",
       },
-      features: [
-        "Modular design",
-        "Better printing Quality",
-        "Various ports",
-        "Upgraded control system",
-        "More stable printerhead",
-      ],
-      subProducts: f500SubProducts,
-    },
-  ];
-
-  const tijSubProducts = [
-    {
-      id: "th1",
-      name: "TH1",
-      image: "/images/th1.png",
-    },
-    {
-      id: "th2",
-      name: "TH2",
-      image: "/images/th2.png",
-    },
-  ];
-
-  const tijProducts = [
-    {
-      id: "f3500",
-      name: "F3500 Series",
-      subtitle: "Thermal Inkjet Printer",
-      color: "text-primary",
-      companyInfo: {
-        brand: "Thermal Inkjet (TIJ)",
-        description:
-          "TIJ printers use heat to eject ink droplets from a cartridge onto a surface, making them a non-contact printing technology for thermal inkjet printer.",
-        leadership: "",
+      {
+        id: "ink4",
+        name: "INK4",
+        image: "/images/ink4.png",
       },
-      features: [
-        "Non-contact printing technology",
-        "High-quality thermal inkjet printing",
-        "Precise ink droplet control",
-        "Reliable cartridge-based system",
-        "Versatile surface compatibility",
-      ],
-      subProducts: tijSubProducts,
-    },
-  ];
-
-  const inspectionSubProducts = [
-    {
-      id: "cam1",
-      name: "CAM1",
-      image: "/images/cam1.png",
-    },
-    {
-      id: "cam2",
-      name: "CAM2",
-      image: "/images/cam2.png",
-    },
-  ];
-
-  const inspectionProducts = [
-    {
-      id: "vision-camera",
-      name: "Better Code Vision Camera",
-      subtitle: "AI Smart Camera System",
-      color: "text-primary",
-      companyInfo: {
-        brand: "Better Code Co., Ltd.",
-        description:
-          "Industrial inspection systems are widely used in food and beverage, cosmetics, pharmaceuticals, building materials and chemicals, metal processing, electronics manufacturing, packaging, automotive manufacturing and other industries, and are still controlled by PC solutions. However, intelligent camera solutions, X86 open platform for factory automation, this solution is easy to use and easy to maintain equipment, and is becoming an increasingly mainstream choice. Better Code Co., Ltd.'s AI smart camera is a highly integrated small-sized machine vision system that integrates image acquisition, storage, processing and communication functions, thus creating a highly functional, modular, highly reliable and easy-to-use machine vision solution. At the same time, due to the continuous iterative updates of DSP, FPGA and mass storage technologies, the artificial intelligence of this AI smart camera is increasing to meet the needs of increasingly complex machine vision applications.",
-        leadership: "",
+      {
+        id: "pro1",
+        name: "PRO1",
+        image: "/images/pro1.png",
       },
-      features: [
-        "Resolution range 0.4MP~25MP, support long-range detection and large FOV",
-        "Built-in large-capacity storage, support loop recording",
-        "Including traditional vision algorithms, including AI deep learning, covering all types of detection",
-        "Support various industrial communication protocols",
-        "Protection level IP65 or above, adapt to industrial application environments",
-      ],
-      subProducts: inspectionSubProducts,
-    },
-  ];
+    ],
+    []
+  );
+
+  const f500SubProducts = useMemo(
+    () => [
+      {
+        id: "ink5",
+        name: "INK5",
+        image: "/images/ink5.png",
+      },
+      {
+        id: "ink6",
+        name: "INK6",
+        image: "/images/ink6.png",
+      },
+      {
+        id: "ink7",
+        name: "INK7",
+        image: "/images/ink7.png",
+      },
+    ],
+    []
+  );
+
+  const cijProducts = useMemo(
+    () => [
+      {
+        id: "a400",
+        name: "FASTJET A400 SERIES",
+        subtitle: "",
+        color: "text-red-600",
+        image: "/assets/images/happyTeam.jpg", // Update with actual A400 image path
+        companyInfo: {
+          brand: "FASTJET",
+          description:
+            "Germany Brand and a German-China joint venture CIJ manufacturer shared by Germany 100 years group Cyklop International. We all adopt Germany ways of production management and technology all comes from Germany and assembled in Shanghai.",
+          leadership: "We are a leading CIJ company in some Asian countries.",
+        },
+        features: [
+          "Modular design",
+          "Better printing Quality",
+          "Various ports",
+          "Upgraded control system",
+          "More stable printerhead",
+        ],
+        subProducts: a400SubProducts,
+      },
+      {
+        id: "f500",
+        name: "FASTJET F500",
+        subtitle: "Small Character Ink Jet Printer",
+        color: "text-red-600",
+        companyInfo: {
+          brand: "FASTJET",
+          description:
+            "Germany Brand and a German-China joint venture CIJ manufacturer shared by Germany 100 years group Cyklop International. We all adopt Germany ways of production management and technology all comes from Germany and assembled in Shanghai.",
+          leadership: "We are a leading CIJ company in some Asian countries.",
+        },
+        features: [
+          "Modular design",
+          "Better printing Quality",
+          "Various ports",
+          "Upgraded control system",
+          "More stable printerhead",
+        ],
+        subProducts: f500SubProducts,
+      },
+    ],
+    [a400SubProducts, f500SubProducts]
+  );
+
+  const tijSubProducts = useMemo(
+    () => [
+      {
+        id: "th1",
+        name: "TH1",
+        image: "/images/th1.png",
+      },
+      {
+        id: "th2",
+        name: "TH2",
+        image: "/images/th2.png",
+      },
+    ],
+    []
+  );
+
+  const tijProducts = useMemo(
+    () => [
+      {
+        id: "f3500",
+        name: "F3500 Series",
+        subtitle: "Thermal Inkjet Printer",
+        color: "text-primary",
+        companyInfo: {
+          brand: "Thermal Inkjet (TIJ)",
+          description:
+            "TIJ printers use heat to eject ink droplets from a cartridge onto a surface, making them a non-contact printing technology for thermal inkjet printer.",
+          leadership: "",
+        },
+        features: [
+          "Non-contact printing technology",
+          "High-quality thermal inkjet printing",
+          "Precise ink droplet control",
+          "Reliable cartridge-based system",
+          "Versatile surface compatibility",
+        ],
+        subProducts: tijSubProducts,
+      },
+    ],
+    [tijSubProducts]
+  );
+
+  const inspectionSubProducts = useMemo(
+    () => [
+      {
+        id: "cam1",
+        name: "CAM1",
+        image: "/images/cam1.png",
+      },
+      {
+        id: "cam2",
+        name: "CAM2",
+        image: "/images/cam2.png",
+      },
+    ],
+    []
+  );
+
+  const inspectionProducts = useMemo(
+    () => [
+      {
+        id: "vision-camera",
+        name: "Better Code Vision Camera",
+        subtitle: "AI Smart Camera System",
+        color: "text-primary",
+        companyInfo: {
+          brand: "Better Code Co., Ltd.",
+          description:
+            "Industrial inspection systems are widely used in food and beverage, cosmetics, pharmaceuticals, building materials and chemicals, metal processing, electronics manufacturing, packaging, automotive manufacturing and other industries, and are still controlled by PC solutions. However, intelligent camera solutions, X86 open platform for factory automation, this solution is easy to use and easy to maintain equipment, and is becoming an increasingly mainstream choice. Better Code Co., Ltd.'s AI smart camera is a highly integrated small-sized machine vision system that integrates image acquisition, storage, processing and communication functions, thus creating a highly functional, modular, highly reliable and easy-to-use machine vision solution. At the same time, due to the continuous iterative updates of DSP, FPGA and mass storage technologies, the artificial intelligence of this AI smart camera is increasing to meet the needs of increasingly complex machine vision applications.",
+          leadership: "",
+        },
+        features: [
+          "Resolution range 0.4MP~25MP, support long-range detection and large FOV",
+          "Built-in large-capacity storage, support loop recording",
+          "Including traditional vision algorithms, including AI deep learning, covering all types of detection",
+          "Support various industrial communication protocols",
+          "Protection level IP65 or above, adapt to industrial application environments",
+        ],
+        subProducts: inspectionSubProducts,
+      },
+    ],
+    [inspectionSubProducts]
+  );
 
   const renderProductDetails = (
     product:
@@ -320,7 +341,7 @@ const ProductsPage = () => {
                     </button>
                   </div>
                 </div>
-              ) : product.image ? (
+              ) : "image" in product && product.image ? (
                 <div className="rounded-xl overflow-hidden shadow-md">
                   <Image
                     src={product.image}
@@ -505,7 +526,7 @@ const ProductsPage = () => {
       });
       setCarouselIndex(initialIndices);
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, cijProducts, tijProducts, inspectionProducts]);
 
   // Handle ESC key to close zoom popup
   useEffect(() => {
