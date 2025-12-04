@@ -189,7 +189,14 @@ const ProductsPage = () => {
     showBackButton: boolean = true
   ) => {
     const productId = product.id || "";
-    const currentIndex = carouselIndex[productId] || 0;
+    const safeCurrentIndex =
+      product.subProducts && product.subProducts.length > 0
+        ? Math.min(
+            carouselIndex[productId] || 0,
+            product.subProducts.length - 1
+          )
+        : 0;
+    const currentIndex = safeCurrentIndex;
 
     return (
       <div className="mt-12">
@@ -211,12 +218,16 @@ const ProductsPage = () => {
           {product.companyInfo && (
             <div className="mb-12">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-primary font-heading mb-4">
-                  About {product.companyInfo.brand}
-                </h3>
-                <p className="text-lg text-tertiary leading-relaxed mb-4">
-                  {product.companyInfo.description}
-                </p>
+                {product.companyInfo.brand && (
+                  <h3 className="text-2xl font-bold text-primary font-heading mb-4">
+                    About {product.companyInfo.brand}
+                  </h3>
+                )}
+                {product.companyInfo.description && (
+                  <p className="text-lg text-tertiary leading-relaxed mb-4">
+                    {product.companyInfo.description}
+                  </p>
+                )}
                 {product.companyInfo.leadership && (
                   <p className="text-lg text-tertiary leading-relaxed font-semibold">
                     {product.companyInfo.leadership}
@@ -236,13 +247,19 @@ const ProductsPage = () => {
                     onClick={() => setIsZoomOpen({ productId, isOpen: true })}
                   >
                     <div className="relative h-[400px] flex items-center justify-center">
-                      <Image
-                        src={product.subProducts[currentIndex].image}
-                        alt={product.subProducts[currentIndex].name}
-                        width={600}
-                        height={400}
-                        className="w-full h-full object-contain"
-                      />
+                      {(() => {
+                        const currentSubProduct =
+                          product.subProducts[currentIndex];
+                        return currentSubProduct ? (
+                          <Image
+                            src={currentSubProduct.image}
+                            alt={currentSubProduct.name}
+                            width={600}
+                            height={400}
+                            className="w-full h-full object-contain"
+                          />
+                        ) : null;
+                      })()}
                     </div>
                   </div>
 
@@ -370,13 +387,18 @@ const ProductsPage = () => {
                 </button>
 
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={product.subProducts[currentIndex].image}
-                    alt={product.subProducts[currentIndex].name}
-                    width={1200}
-                    height={800}
-                    className="max-w-full max-h-[90vh] object-contain"
-                  />
+                  {(() => {
+                    const currentSubProduct = product.subProducts[currentIndex];
+                    return currentSubProduct ? (
+                      <Image
+                        src={currentSubProduct.image}
+                        alt={currentSubProduct.name}
+                        width={1200}
+                        height={800}
+                        className="max-w-full max-h-[90vh] object-contain"
+                      />
+                    ) : null;
+                  })()}
                 </div>
 
                 {/* Navigation in popup */}
