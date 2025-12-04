@@ -6,7 +6,6 @@ import Image from "next/image";
 const ProductsPage = () => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [carouselIndex, setCarouselIndex] = useState<Record<string, number>>(
     {}
   );
@@ -224,12 +223,6 @@ const ProductsPage = () => {
             <h2 className="text-3xl font-bold text-primary font-heading">
               {product.name}
             </h2>
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="px-4 py-2 text-tertiary hover:text-primary transition-colors"
-            >
-              ← Back to Products
-            </button>
           </div>
         )}
         {!showBackButton && (
