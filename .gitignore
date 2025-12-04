@@ -33,3 +33,7 @@ local
 
 # vercel
 .vercel
+
+
+.cursor/rules/kluster-code-verify.mdc
+.kluster

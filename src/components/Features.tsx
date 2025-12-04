@@ -24,30 +24,40 @@ const Features = () => {
         </div>
 
         <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-10">
-            {featuresList.map((feature) => (
+          <dl className="space-y-6 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+            {featuresList.map((feature, index) => (
               <div
                 key={feature.name}
-                className="relative bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-border"
+                className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-secondary/20 transform hover:-translate-y-2 overflow-hidden"
               >
-                <dt>
+                {/* Gradient background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 transition-all duration-300 rounded-2xl"></div>
+
+                <dt className="relative z-10">
                   <div
-                    className={`absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white`}
+                    className={`flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-secondary to-blue-600 text-white shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4`}
                   >
                     <Image
-                      className={`inline-block h-6 w-6 rounded-full brightness-0 invert`}
+                      className={`inline-block h-7 w-7 brightness-0 invert`}
                       src={feature.icon}
                       alt={feature.name}
-                      width={24}
-                      height={24}
+                      width={28}
+                      height={28}
                     />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-bold text-primary font-heading">
+                  <p className="text-xl leading-6 font-bold text-primary font-heading mb-3 group-hover:text-secondary transition-colors">
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-4 ml-16 text-base text-tertiary">
-                  {feature.description}
+                <dd className="relative z-10 mt-4 text-sm text-tertiary leading-relaxed">
+                  <div className="space-y-1">
+                    {feature.description.split(" | ").map((item, idx) => (
+                      <div key={idx} className="flex items-start">
+                        <span className="text-secondary mr-2 mt-1.5">•</span>
+                        <span className="flex-1">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </dd>
               </div>
             ))}

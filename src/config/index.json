@@ -23,7 +23,7 @@
   ],
   "callToAction": {
     "text": "Get started",
-    "href": "#"
+    "href": "/about"
   },
   "mainHero": {
     "title": "KiranPrava ",
@@ -32,11 +32,11 @@
     "img": "/assets/images/happyTeam.jpg",
     "primaryAction": {
       "text": "Get started",
-      "href": "#"
+      "href": "/about"
     },
     "secondaryAction": {
       "text": "Email us",
-      "href": "mailto:kiranpravapvtltd@gmail.com?subject=Customer inquiry"
+      "href": "/contact"
     }
   },
   "product": {
@@ -56,23 +56,33 @@
     "items": [
       {
         "name": "Printing Solution",
-        "description": "Industrial Inkjet Printer | Handheld Inkjet Printer | Inkjet Printer Consumable | Inkjet Printer Spares Parts | HP Ink Cartridge | Printer Head Wash Solution | Printer Stands",
+        "description": "Industrial Inkjet Printer | Handheld Inkjet Printer | Inkjet Printer Consumable | Inkjet Printer Spares Parts | HP Ink Cartridge | Printer Head Wash Solution | Printer Stands | Continuous Inkjet Systems | Thermal Inkjet Systems | TTO Printers | Date Coding Printers | Batch Printing Solutions",
         "icon": "/assets/images/react.png"
       },
       {
         "name": "Machine Solution",
-        "description": "Batch Coding Machine | Packaging Machine | Sealing Machine | Semi Automatic Box Strapping Machines | Carton Taping Machine | Coding Machine | Handy Marker Machine",
+        "description": "Batch Coding Machine | Packaging Machine | Sealing Machine | Semi Automatic Box Strapping Machines | Carton Taping Machine | Coding Machine | Handy Marker Machine | Shrink Wrapping Machines | Vacuum Packaging Machines | Strapping Machines | Label Applicators | Conveyor Systems",
         "icon": "/assets/images/tailwindcss.svg"
       },
       {
         "name": "More Product",
-        "description": "LDPE Shrink Film Roll | ",
+        "description": "LDPE Shrink Film Roll | Stretch Wrapping Film | Vacuum Sealing Bags | Heat Shrink Labels | Packaging Tapes | Bubble Wrap | Protective Packaging Materials",
         "icon": "/assets/images/nextjs.svg"
       },
       {
         "name": "Other Product",
-        "description": "Tto Ribbons",
+        "description": "TTO Ribbons | Thermal Transfer Ribbons | Barcode Labels | Industrial Labels | Date Coding Labels | Product Identification Labels | Custom Printing Labels",
         "icon": "/assets/images/ts.png"
+      },
+      {
+        "name": "Service & Support",
+        "description": "24X7 Technical Support | On-site Installation | Preventive Maintenance | Emergency Repair Services | Training & Consultation | Spare Parts Supply | Equipment Calibration",
+        "icon": "/assets/images/react.png"
+      },
+      {
+        "name": "Consumables & Supplies",
+        "description": "Ink Cartridges | Solvent Inks | Make-up Solutions | Cleaning Solutions | Filter Kits | Print Heads | Maintenance Kits | Replacement Parts for all major brands",
+        "icon": "/assets/images/tailwindcss.svg"
       }
     ]
   },

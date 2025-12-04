@@ -17,7 +17,9 @@ const ContactPage = () => {
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden md:flex">
             <div className="p-8 md:w-1/2 bg-secondary text-white">
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-6 text-white">
+                Contact Information
+              </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <svg
@@ -57,7 +59,7 @@ const ContactPage = () => {
                   </svg>
                   <a
                     href="tel:+918984636379"
-                    className="hover:text-blue-200 transition-colors"
+                    className="hover:text-blue-200 transition-colors text-white"
                   >
                     +91 89846 36379
                   </a>
@@ -78,7 +80,7 @@ const ContactPage = () => {
                   </svg>
                   <a
                     href="mailto:kiranpravapvtltd@gmail.com"
-                    className="hover:text-blue-200 transition-colors"
+                    className="hover:text-blue-200 transition-colors text-white"
                   >
                     kiranpravapvtltd@gmail.com
                   </a>

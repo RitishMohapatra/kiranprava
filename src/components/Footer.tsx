@@ -16,11 +16,11 @@ const Footer = () => {
             <a href="#" className="inline-block mb-6">
               <span className="sr-only">{companyName}</span>
               <Image
-                className="h-12 w-auto brightness-0 invert"
+                className="h-24 w-48 brightness-0 invert"
                 src={logo}
                 alt={companyName}
-                width={48}
-                height={48}
+                width={192}
+                height={96}
               />
             </a>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -99,33 +99,26 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Products</h3>
-            <ul className="space-y-4">
+            <h3 className="text-xl font-bold mb-6 text-white">Products</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/products">
-                  <a className="text-gray-400 hover:text-secondary transition-colors">
+                <Link href="/products?category=cij">
+                  <a className="text-white hover:text-gray-300 transition-colors">
                     Inkjet Printers
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/products">
-                  <a className="text-gray-400 hover:text-secondary transition-colors">
-                    Laser Marking
+                <Link href="/products?category=tij">
+                  <a className="text-white hover:text-gray-300 transition-colors">
+                    Thermal Inkjet (TIJ) Printer
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/products">
-                  <a className="text-gray-400 hover:text-secondary transition-colors">
-                    Consumables
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <a className="text-gray-400 hover:text-secondary transition-colors">
-                    Spare Parts
+                <Link href="/products?category=inspection">
+                  <a className="text-white hover:text-gray-300 transition-colors">
+                    Workpiece Inspection Camera
                   </a>
                 </Link>
               </li>
@@ -215,14 +208,19 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <p className="text-gray-500 text-sm">
-              Made with ❤️ by{" "}
+              Made by{" "}
               <a
                 href="https://ritishm.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                Ritish Mohapatra
+                Bitsparx
+                <a
+                  href="https://bitsparx.com"
+                  target="_blank"
+                  rel="noreferrer"
+                ></a>
               </a>
             </p>
           </div>

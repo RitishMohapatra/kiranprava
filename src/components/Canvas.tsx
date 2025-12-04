@@ -1,8 +1,8 @@
-import { useRef, FC, useEffect, useState } from 'react';
+import { useRef, FC, useEffect, useState } from "react";
 
-import { CanvasContext } from '../hooks/useCanvas';
-import useResponsiveSize from '../hooks/useResponsiveSize';
-import Wave from './Wave';
+import { CanvasContext } from "../hooks/useCanvas";
+import useResponsiveSize from "../hooks/useResponsiveSize";
+import Wave from "./Wave";
 
 const Canvas: FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -12,17 +12,23 @@ const Canvas: FC = () => {
   >();
 
   useEffect(() => {
-    const ctx = canvasRef?.current?.getContext('2d');
+    const ctx = canvasRef?.current?.getContext("2d");
     if (ctx) setContext(ctx);
   }, []);
 
   return (
-    <>
+    <div className="relative -mt-4">
       <CanvasContext.Provider value={{ context }}>
-        <canvas id="canvas" ref={canvasRef} width={width} height={220}></canvas>
+        <canvas
+          id="canvas"
+          ref={canvasRef}
+          width={width}
+          height={220}
+          className="block w-full"
+        ></canvas>
         <Wave />
       </CanvasContext.Provider>
-    </>
+    </div>
   );
 };
 
