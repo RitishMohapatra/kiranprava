@@ -515,7 +515,7 @@ const ProductsPage = () => {
       });
       setCarouselIndex(initialIndices);
     }
-  }, [selectedCategory, cijProducts, tijProducts, inspectionProducts]);
+  }, [selectedCategory]);
 
   // Handle ESC key to close zoom popup
   useEffect(() => {

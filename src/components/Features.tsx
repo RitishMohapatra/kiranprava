@@ -25,7 +25,7 @@ const Features = () => {
 
         <div className="mt-10">
           <dl className="space-y-6 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
-            {featuresList.map((feature) => (
+            {featuresList.map((feature, index) => (
               <div
                 key={feature.name}
                 className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-secondary/20 transform hover:-translate-y-2 overflow-hidden"
