@@ -24,31 +24,6 @@ const ProductsPage = () => {
     }
   }, [router.query.category, selectedCategory]);
 
-  const productCategories = [
-    {
-      id: "cij",
-      title: "Inkjet Date Printer (CIJ)",
-      description:
-        "Continuous Inkjet printing solutions for industrial applications",
-      icon: "🖨️",
-      gradient: "from-blue-500 to-blue-600",
-    },
-    {
-      id: "tij",
-      title: "Thermal Inkjet (TIJ) printer",
-      description: "High-quality thermal inkjet printing technology",
-      icon: "🖨️",
-      gradient: "from-purple-500 to-purple-600",
-    },
-    {
-      id: "inspection",
-      title: "Workpiece inspection camera",
-      description: "Advanced inspection and quality control systems",
-      icon: "📷",
-      gradient: "from-indigo-500 to-indigo-600",
-    },
-  ];
-
   const a400SubProducts = [
     {
       id: "ink2",
