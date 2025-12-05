@@ -7,7 +7,7 @@
     {
       "name": "Home",
       "href": "/"
-    },  
+    },
     {
       "name": "About",
       "href": "/about"
@@ -85,7 +85,6 @@
   "pricing": {
     "title": "Products",
     "items": [
-     
       {
         "name": "/images/img76.png",
         "price": "Close Body Marking Machine",
